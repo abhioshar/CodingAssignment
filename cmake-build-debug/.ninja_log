@@ -1,0 +1,17 @@
+# ninja log v5
+1	167	6979268126251468	build.ninja	5bb4cacec1d97b04
+20	968	6979264053810563	CMakeFiles/assignment.dir/input/FileInput.cpp.obj	37c5068a5701307d
+5	2078	6979264064931670	CMakeFiles/assignment.dir/main.cpp.obj	1af0bd97b08b3605
+16	1246	6979264056600469	CMakeFiles/assignment.dir/util/HashmapGroupingAlgorithm.cpp.obj	a4d1a3f3a79d2ffa
+2079	2291	6979264066991709	assignment.exe	821faa2ee22b811b
+9	1006	6979264054200457	CMakeFiles/assignment.dir/driver/Driver.cpp.obj	4506f8efc55489f6
+25	815	6979264052280453	CMakeFiles/assignment.dir/output/FileOutput.cpp.obj	d153ea519443f4d1
+12	594	6979264050060471	CMakeFiles/assignment.dir/service/ProcessingService.cpp.obj	6eb6319d1d89b024
+1	9	0	clean	567f01a6bad3308b
+14	615	6979268179026913	CMakeFiles/assignment.dir/service/ProcessingService.cpp.obj	1afeaf0ca0e36e4f
+22	749	6979268180366917	CMakeFiles/assignment.dir/output/FileOutput.cpp.obj	ac4604ea999825a
+6	914	6979268182006888	CMakeFiles/assignment.dir/input/FileInput.cpp.obj	e80f2bc21c2d6b7e
+1	934	6979268182226915	CMakeFiles/assignment.dir/driver/Driver.cpp.obj	b1c5ae57bbb5ced1
+17	1207	6979268184946871	CMakeFiles/assignment.dir/util/HashmapGroupingAlgorithm.cpp.obj	17868f1f262afde5
+10	2003	6979268192916845	CMakeFiles/assignment.dir/main.cpp.obj	5981c6141075f0f9
+2005	2215	6979268194957297	assignment.exe	9793a1e1801059bb
