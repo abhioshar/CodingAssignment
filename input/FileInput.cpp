@@ -4,6 +4,7 @@
 #include "FileInput.h"
 
 std::vector<std::vector<std::string>> FileInput::getInput() {
+    std::cout<<"Started getting file input...\n";
     std::ifstream inputFile;
     std::vector<std::vector<std::string>> inputFileSentences;
     inputFile.open("../files/PrivateInvestigator.txt", std::ios::in);
@@ -27,5 +28,6 @@ std::vector<std::vector<std::string>> FileInput::getInput() {
         inputFile.close();
     }
 
+    std::cout<<"Returning file input...\n";
     return inputFileSentences;
 }

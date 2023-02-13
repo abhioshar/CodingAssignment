@@ -4,11 +4,24 @@
 #include "HashmapGroupingAlgorithm.h"
 #include "SentenceIndex.h"
 
+class HashFunction {
+public:
+    size_t operator()(const std::list<std::string> &input) const {
+        size_t hash = input.size();
+        for(auto &in : input) {
+            hash ^= std::hash<std::string>{}(in) + 0x9e3779b9 + (hash << 6) + (hash >> 2);
+        }
+        return hash;
+    }
+};
+
 std::vector<std::string>
 HashmapGroupingAlgorithm::groupSentences(std::vector<std::vector<std::string>> &sentences) {
 
     std::vector<std::string> outputLines;
-    std::map<std::list<std::string>, std::vector<SentenceIndex>> sentenceToIndicesMap;
+//    std::map<std::list<std::string>, std::vector<SentenceIndex>> sentenceToIndicesMap;
+
+    std::unordered_map<std::list<std::string>, std::vector<SentenceIndex>, HashFunction> sentenceToIndicesMap;
 
     for (int i = 0; i < sentences.size(); ++i) {
         auto line = sentences[i];

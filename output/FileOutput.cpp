@@ -3,6 +3,7 @@
 #include <fstream>
 
 void FileOutput::write(std::vector<std::string> vector1) {
+    std::cout<<"Started writing file output...\n";
     std::fstream outputFile;
     outputFile.open("../files/output.txt", std::ios::out);
     if (!outputFile) {
@@ -14,4 +15,6 @@ void FileOutput::write(std::vector<std::string> vector1) {
         }
         outputFile.close();
     }
+
+    std::cout<<"File output written successfully\n";
 }

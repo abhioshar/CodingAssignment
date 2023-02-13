@@ -13,12 +13,11 @@
 using namespace std;
 
 void Driver::beginProgramExecution() {
+    // Input/Output/GroupingAlgorithm can be of user's choice here
+    Input *fileInput = new FileInput();
+    Output *fileOutput = new FileOutput();
+    GroupingAlgorithm *hashmapGroupingAlgorithm = new HashmapGroupingAlgorithm();
     try {
-        // Input/Output/GroupingAlgorithm can be of user's choice here
-        Input *fileInput = new FileInput();
-        Output *fileOutput = new FileOutput();
-        GroupingAlgorithm *hashmapGroupingAlgorithm = new HashmapGroupingAlgorithm();
-
         ProcessingService::generateMatchingSentences(fileInput, fileOutput,
                                                      hashmapGroupingAlgorithm);
     } catch (std::exception& ex) {
@@ -26,4 +25,6 @@ void Driver::beginProgramExecution() {
     } catch (...) {
         std::cerr<<"Exception caught while trying to perform program execution!\n";
     }
+
+    delete fileInput, fileOutput, hashmapGroupingAlgorithm;
 }
