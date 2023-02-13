@@ -11,8 +11,8 @@ strategy for choosing grouping algorithm at runtime.
 
 Class Flow is:
 
-*Main method -> Driver -> ProcessingService -> Input -> ProcessingService -> GroupingAlgorithm -> 
-ProcessingService -> Output*
+#### Main method -> Driver -> ProcessingService -> Input -> ProcessingService -> GroupingAlgorithm -> 
+ProcessingService -> Output ####
 
 #### Algorithm ####
 The solution uses hashmap based approach for solving.
