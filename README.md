@@ -1,8 +1,21 @@
 # Assignment
 
 ## Overview of the solution:
+
+*Assumptions:* 
+1. I've assumed there are no special characters in the input
+2. Sentence matching has to preserve the relative ordering of the words as given in input
+
 The solution uses hashmap based approach for solving.
-Eg: 
+Hashmap has sentence as the key(omitting a single word at a time) which maps to a vector of pair of 
+two 
+values.
+
+First value of the pair: the index of the mapped line
+in the file. Second: the index of word omitted from he line.
+
+
+Eg: a line from file
 
 *01-01-2012 19:45:00 Naomi is getting into the car*
 
@@ -56,7 +69,7 @@ required from the map value viz. line index and the word changed.
    directory in root.
 
 ## Other Questions
-1. What can you say about the complexity of your code?
+### 1. What can you say about the complexity of your code? ###
 
     
     ### Time Complexity ###
@@ -66,19 +79,17 @@ required from the map value viz. line index and the word changed.
     N: Total lines in the file
     
     W: Max words in a line
-
-    w: Max length of a word
-    ,
     
     HashMap: Each entry in map takes O(1) amortized time to search/update etc where N are number of 
     entries in the map. Here I'm using list as the key of the hashmap, hence, complexity will
     become O(1) * (time taken by hashmap to generate hash for the the key, which here is O(no. of 
     words in a line(W))) as each key in hashmap has list of O(W) words.
     
-    Total complexity: N * W * (W)
+    Total complexity: N * W * W
+
     As, when we are processing each line, we are omitting one word at a time. Hence, we iterate over 
-    each line W times (=> N * W). And, each operation over hashmap is O(W). Hence, N*W*W total 
-    complexity.
+    each line W times (=> N * W). And, each operation over hashmap is O(W). Hence, O(N * W * W) 
+    total complexity.
 
     It can be improved by using a better hash function. Because of limited time I've used this 
     approach.
@@ -87,7 +98,7 @@ required from the map value viz. line index and the word changed.
 
     Extra storage used is Hashmap, complexity: O(N * W)
 
-2. How will your algorithm scale?
+### 2. How will your algorithm scale? ###
     
 
     2.1 Time wise, algorithm with scale linearly with no. of input lines and quadratically with no.
@@ -104,8 +115,7 @@ required from the map value viz. line index and the word changed.
     principle.
 
 
-3. If you had two weeks to do this task, what would you have done differently? What would be
-   better?
+### 3. If you had two weeks to do this task, what would you have done differently? What would be better? ###
 
 
     3.1 Start with UML/Class diagrams to better understand/communicate the system. 
