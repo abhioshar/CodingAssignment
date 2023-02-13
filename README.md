@@ -6,6 +6,15 @@
 1. I've assumed there are no special characters in the input
 2. Sentence matching has to preserve the relative ordering of the words as given in input
 
+I've used interfaces for Input/Output/Grouping algorithm which use single responsibility and 
+strategy for choosing grouping algorithm at runtime.
+
+Class Flow is:
+
+*Main method -> Driver -> ProcessingService -> Input -> ProcessingService -> GroupingAlgorithm -> 
+ProcessingService -> Output*
+
+#### Algorithm ####
 The solution uses hashmap based approach for solving.
 Hashmap has sentence as the key(omitting a single word at a time) which maps to a vector of pair of 
 two 
