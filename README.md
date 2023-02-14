@@ -111,15 +111,22 @@ required from the map value viz. line index and the word changed.
 ### 2. How will your algorithm scale? ###
     
 
-    2.1 Time wise, algorithm with scale linearly with no. of input lines and quadratically with no.
-    of words used in a line
+    2.1 Time wise, algorithm with scale linearly with no. of input lines and quadratically with  
+    max no. of words used in a line
 
-    2.2 Space wise, algorithm will scale linearly w.r.t input
+    2.2 Space wise, algorithm will scale same as above point as both complexities are the same.
 
-    2.3 Input/Output wise, I've used interfaces which can be implemented to support various other
+    2.3 Current algorithm preserves order of the sentences. If that is not required, we can just 
+    create a new strategy for grouping algorithm and use it in our program. Existing code remains 
+    closed for modification and open for extension in this way.
+
+    2.4 I've also used lowercasing for all the matching. Hence, string matching will work with 
+    both lower/upper cases.
+
+    2.5 Input/Output wise, I've used interfaces which can be implemented to support various other
     input/output sources, following the Single Responsibility and Open/Closed Solid principle.
 
-    2.4 Support for any grouping algorithm can be made, as I've used strategy pattern to select
+    2.6 Support for any grouping algorithm can be made, as I've used strategy pattern to select
     any algorithm. Interface "util/GroupingAlgorithm" can be implemented to implement any other 
     algorithm for grouping the sentences, following the Single Responsibility and Open/Closed Solid 
     principle.
