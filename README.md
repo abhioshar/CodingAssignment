@@ -155,6 +155,8 @@ required from the map value viz. line index and the word changed.
 
     3.8 Add multiple input/output sources.
 
+    3.9 Try to deploy the application to the cloud and add APIs 
+
     3.9 If time permitted, I'd have researched if we can add support for files larger than memory 
     and using multithreading to solve the problem.
 
