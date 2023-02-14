@@ -86,7 +86,7 @@ required from the map value viz. line index and the word changed.
     
     N: Total lines in the file
     
-    W: Max words in a line
+    W: Maximum no. of words in a line
     
     HashMap: Each entry in map takes O(1) amortized time to search/update etc where N are number of 
     entries in the map. Here I'm using list as the key of the hashmap, hence, complexity will
@@ -104,7 +104,9 @@ required from the map value viz. line index and the word changed.
 
     ### Space Complexity ###
 
-    Extra storage used is Hashmap, complexity: O(N * W)
+    Extra storage used is Hashmap, which has complexity: O(N * W * (W-1)) => O(N * W * W). 
+    As for each line, we are storing W-1 words(omitting one word every time) in each of our W 
+    iterations.
 
 ### 2. How will your algorithm scale? ###
     
