@@ -50,7 +50,7 @@ Eg for above hashmap:
 If another line anywhere in the file matches any entry in the above map, we add the {lineIndex, 
 wordIndex) pair to the map key.
 
-Eg: in above example if some line arrives (assume line number 3) which is: 
+Eg: in above example if some line arrives (assume line index 2) which is: 
 
 *"John is getting into the car"*
 
