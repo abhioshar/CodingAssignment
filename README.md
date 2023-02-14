@@ -6,8 +6,9 @@
 1. I've assumed there are no special characters in the input
 2. Sentence matching has to preserve the relative ordering of the words as given in input
 
-I've used interfaces for Input/Output/Grouping algorithm which use single responsibility and 
-strategy for choosing grouping algorithm at runtime.
+I've used interfaces for Input/Output/Grouping algorithm and 
+strategy for choosing grouping algorithm at runtime. These follow single responsibility,
+Open/Closed principles.
 
 Class Flow is:
 
