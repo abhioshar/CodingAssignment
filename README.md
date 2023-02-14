@@ -42,9 +42,9 @@ Each key in the hashmap, maps to list of {lineIndex, wordIndexInLine} pair.
 
 Eg for above hashmap:
 
-1. [is getting into the car] -> {{0 (line index in original file, 0 (index of the word omitted, 
-   here it's 0}}
-2. [Naomi getting into the car] -> {{1 (line index is now 1, 1 (the word omitted had index 1}}
+1. [is getting into the car] -> {{0 (line index in original file, 0 (index of the word omitted 
+   in line, here it's 0}}
+2. [Naomi getting into the car] -> {{0 (line index is remains 0, 1 (the word omitted had index 1}}
 
 
 If another line anywhere in the file matches any entry in the above map, we add the {lineIndex, 
